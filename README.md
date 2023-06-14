@@ -6,22 +6,19 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Build and serve locally
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `npm run start-pwa` to build and run app with PWA support.
 
-## Build
+## Service Worker Overview
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+A Service Worker is like background daemon process that sits between our web application and the network, intercepting all HTTP requests made by the application.
 
-## Running unit tests
+The Service Worker does not have access direct access to the DOM. Actually, the same Service Worker instance is shared across multiple tabs of the same application and can intercept the requests from all those tabs.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Note that for security reasons the Service Worker cannot see requests made by other web applications running in the same browser, and only works over HTTPS (except on localhost, for development purposes).
 
-## Running end-to-end tests
+In summary: a Service Worker is a network proxy, running inside the browser itself!
+to read more follow this link : https://blog.angular-university.io/service-workers/
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

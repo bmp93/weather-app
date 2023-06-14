@@ -1,1 +1,118 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import "./assets/icon-fonts/app-icons";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/font-awesome/css/font-awesome.min.css";
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 0;
+}
+
+label {
+    margin-bottom: 0;
+}
+
+.card {
+    cursor: pointer;
+    color: #fff;
+    border: 0;
+    transition: .2s all ease-in-out;
+    // background: #00B4DB;
+    // background: linear-gradient(to right, #0083B0, #00B4DB);
+    border-color: #fff;
+    position: relative;
+
+    &:hover {
+        box-shadow: 7px 9px 9px 0px rgba(204, 204, 204, 0.72);
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        opacity: .4;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        top: 0;
+        user-select: none;
+        pointer-events: none;
+    }
+
+    .card-header,
+    .card-footer,
+    .card-body {
+        // background: #00B4DB;
+
+        // background: linear-gradient(to right, #0083B0, #00B4DB);
+        border-color: #fff;
+    }
+
+}
+
+/* border */
+.border-top-2 {
+    border-top: 2px solid white;
+}
+
+/* weather icon  */
+.weather-icon {
+    font-size: 80px;
+}
+
+/* degree with its symbol behind */
+.degree {
+    font-size: 40px;
+    position: relative;
+
+    &-digit {
+        &:after {
+            font-weight: 500;
+            content: 'o';
+            font-size: 20px;
+            position: absolute;
+            top: 0;
+            right: -9px;
+        }
+    }
+}
+
+/* the width of card */
+.card-width {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-auto-flow: row dense;
+    grid-gap: 15px;
+}
+
+.icon-clear {
+    &:before {
+        content: "\f185";
+        font-family: FontAwesome !important;
+    }
+}
+
+form {
+    background: #00B4DB;
+    background: linear-gradient(to right, #0083B0, #00B4DB);
+    background-size: cover;
+    min-height: 340px
+}
+
+.form-control {
+    &.regular-width {
+        max-width: 200px;
+    }
+}
